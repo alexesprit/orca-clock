@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 2,
+  "id": "clock",
+  "name": "Orca Clock",
+  "version": "0.1.0",
+  "description": "Current local time in the Orca status bar.",
+  "license": "MIT",
+  "cover": {
+    "path": "media/cover.png",
+    "alt": "Orca Clock showing 24-hour and 12-hour local time in two dark status bar previews."
+  },
+  "execution": "trusted-worker",
+  "engines": { "orca": ">=1.4.248" },
+  "main": "clock.mjs",
+  "capabilities": [{ "kind": "settings:own" }],
+  "contributes": {
+    "settings": [
+      {
+        "key": "hourFormat",
+        "title": "Hour format",
+        "description": "Use the locale default or force a 12-hour or 24-hour clock.",
+        "type": "string",
+        "default": "locale",
+        "enum": ["locale", "12-hour", "24-hour"],
+        "enumLabels": ["Locale default", "12-hour", "24-hour"]
+      }
+    ],
+    "statusBarItems": [
+      { "id": "clock", "text": "…", "tooltip": "Local time" }
+    ]
+  }
+}

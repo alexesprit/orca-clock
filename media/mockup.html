@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Orca Clock — cover mockup</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--background, #101113);
+        color: var(--foreground, #dedfe2);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .preview {
+        container-type: inline-size;
+        width: min(100%, 1200px);
+        margin: auto;
+      }
+
+      .cover {
+        position: relative;
+        aspect-ratio: 8 / 5;
+        overflow: hidden;
+        padding: 4.5cqw 5cqw;
+        background: #101113;
+        color: #dedfe2;
+      }
+
+      .eyebrow {
+        margin: 0;
+        color: #858991;
+        font-size: 1cqw;
+        font-weight: 600;
+        letter-spacing: 0.2cqw;
+      }
+
+      h1 {
+        margin: 1.75cqw 0 1.1cqw;
+        font-size: 5cqw;
+        font-weight: 620;
+        letter-spacing: -0.22cqw;
+        line-height: 1.08;
+      }
+
+      h1 span {
+        color: #7a7f84;
+      }
+
+      .subtitle {
+        margin: 0;
+        color: #90949c;
+        font-size: calc(19cqw / 12);
+      }
+
+      .formats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2cqw;
+        margin-top: 4.5cqw;
+      }
+
+      .label {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0.2cqw 1.1cqw;
+        font-size: 1.25cqw;
+        font-weight: 550;
+      }
+
+      .window {
+        overflow: hidden;
+        border: 1px solid #313338;
+        border-radius: 0.75cqw;
+        background: #191b1e;
+      }
+
+      .chrome {
+        display: flex;
+        align-items: center;
+        gap: 0.45cqw;
+        height: 3.5cqw;
+        padding: 0 1.5cqw;
+        border-bottom: 1px solid #2a2c30;
+        background: #1e2023;
+      }
+
+      .chrome i {
+        width: 0.5cqw;
+        height: 0.5cqw;
+        border-radius: 50%;
+        background: #45484e;
+      }
+
+      .workspace {
+        display: flex;
+        height: 17cqw;
+      }
+
+      .sidebar {
+        width: 26%;
+        padding: 2cqw 1.4cqw;
+        border-right: 1px solid #292c31;
+      }
+
+      .editor {
+        flex: 1;
+        padding: 2cqw;
+      }
+
+      .line {
+        width: 75%;
+        height: 0.45cqw;
+        margin-bottom: 1.2cqw;
+        border-radius: 0.2cqw;
+        background: #303338;
+      }
+
+      .line:nth-child(even) {
+        width: 50%;
+      }
+
+      .editor .line {
+        background: #292c31;
+      }
+
+      .status-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 5.5cqw;
+        padding: 0 1.8cqw;
+        border-top: 1px solid #313338;
+        background: #202225;
+      }
+
+      .branch {
+        color: #858991;
+        font: 1.2cqw ui-monospace, SFMono-Regular, monospace;
+      }
+
+      time {
+        color: #eceef1;
+        font-size: 2.6cqw;
+        font-weight: 500;
+        font-variant-numeric: tabular-nums;
+        letter-spacing: -0.06cqw;
+      }
+
+    </style>
+  </head>
+  <body>
+    <main class="preview">
+      <article class="cover" id="cover-art" aria-label="Orca Clock plugin cover">
+        <p class="eyebrow">ORCA / STATUS BAR PLUGIN</p>
+        <h1>Orca Clock<span>.</span></h1>
+        <p class="subtitle">Your local time, right in the status bar.</p>
+
+        <div class="formats">
+          <section aria-label="24-hour clock preview">
+            <h2 class="label">24-hour</h2>
+            <div class="window">
+              <div class="chrome" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="workspace" aria-hidden="true">
+                <div class="sidebar">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+                <div class="editor">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+              </div>
+              <div class="status-bar">
+                <span class="branch">main</span>
+                <time datetime="21:08">21:08</time>
+              </div>
+            </div>
+          </section>
+
+          <section aria-label="12-hour clock preview">
+            <h2 class="label">12-hour</h2>
+            <div class="window">
+              <div class="chrome" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="workspace" aria-hidden="true">
+                <div class="sidebar">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+                <div class="editor">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+              </div>
+              <div class="status-bar">
+                <span class="branch">main</span>
+                <time datetime="21:08">09:08 PM</time>
+              </div>
+            </div>
+          </section>
+        </div>
+
+      </article>
+    </main>
+  </body>
+</html>
