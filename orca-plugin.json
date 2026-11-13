@@ -1,13 +1,13 @@
 {
   "manifestVersion": 2,
   "id": "clock",
-  "name": "Orca Clock",
-  "version": "0.1.0",
+  "name": "Clock for Orca",
+  "version": "0.1.1",
   "description": "Current local time in the Orca status bar.",
   "license": "MIT",
   "cover": {
     "path": "media/cover.png",
-    "alt": "Orca Clock showing 24-hour and 12-hour local time in two dark status bar previews."
+    "alt": "Clock for Orca showing 24-hour and 12-hour local time in two dark status bar previews."
   },
   "execution": "trusted-worker",
   "engines": { "orca": ">=1.4.248" },

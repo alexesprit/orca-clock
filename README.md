@@ -1,10 +1,10 @@
-# Orca Clock
+# Clock for Orca
 
 Shows the current local hours and minutes in Orca's bottom status bar, using
 Node's default locale and the local time zone. Requires
 Orca 1.4.248 or newer. No dependencies or build step.
 
-In Orca Settings, under the Orca Clock plugin, set **Hour format** to **Locale
+In Orca Settings, under the Clock for Orca plugin, set **Hour format** to **Locale
 default**, **12-hour**, or **24-hour**. Changes apply immediately. Locale default
 preserves the original behavior; it may not reflect a macOS clock-format override.
 
@@ -32,7 +32,7 @@ there is no panel to render.
 ## Install
 
 ```sh
-orca plugin install alexesprit/orca-clock@v0.1.0 --json
+orca plugin install alexesprit/orca-clock@v0.1.1 --json
 ```
 
 Orca returns `approval_required` and an exact command with `--approve <fingerprint>`.
